@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "ch13.type_param.Main",
+            "projectName": "java-notebook_8e385eac"
+        },
+        {
+            "type": "java",
             "name": "Launch MyClass2",
             "request": "launch",
             "mainClass": "ch2.MyClass2",
