@@ -5,10 +5,28 @@ import java.util.Arrays;
 
 public class ArrayFiller {
     public static <T> T[] fill(T[] arr, Generator<T> gen) {
-        for (int i = 0; i < arr.length; i++) {
+        return fill(arr, gen, 0, arr.length);
+    }
+
+    public static <T> T[] fill(T[] arr, Generator<T> gen, int fromIndex, int toIndex) {
+        if (fromIndex < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (toIndex > arr.length) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (int i = fromIndex; i < toIndex; i++) {
             arr[i] = gen.next();
         }
         return arr;
+    }
+
+    public static <T> T[] fillHead(T[] arr, Generator<T> gen, int toIndex) {
+        return fill(arr, gen, 0, toIndex);
+    }
+
+    public static <T> T[] fillTail(T[] arr, Generator<T> gen, int fromIndex) {
+        return fill(arr, gen, fromIndex, arr.length);
     }
 
     @SuppressWarnings("unchecked")

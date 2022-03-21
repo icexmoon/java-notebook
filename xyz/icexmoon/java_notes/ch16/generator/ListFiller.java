@@ -20,6 +20,13 @@ public class ListFiller {
         return list;
     }
 
+    public static <T> List<T> fillBySame(List<T> list, T item, int num) {
+        for (int i = 0; i < num; i++) {
+            list.add(item);
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
         List<Integer> nums = new ArrayList<>();
         fill(nums, new CommonGenerator.IntGenerator(), 5);

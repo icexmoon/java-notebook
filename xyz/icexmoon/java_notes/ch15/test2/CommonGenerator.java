@@ -9,6 +9,10 @@ public class CommonGenerator {
             return counter++;
         }
 
+        @Override
+        public void reset() {
+            counter = 0;
+        }
     }
 
     public static class CharGenerator implements Generator<Character> {
