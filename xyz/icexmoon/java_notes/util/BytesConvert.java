@@ -62,4 +62,12 @@ public class BytesConvert {
         binaryStr = String.format("%8s", binaryStr).replace(" ", "0");
         return binaryStr;
     }
+
+    public static String convertBytes2BinaryStr(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(BytesConvert.convertByteToBinaryStr(b));
+        }
+        return sb.toString();
+    }
 }
