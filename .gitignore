@@ -4,3 +4,5 @@ xyz/icexmoon/java_notes/ch10/catch4/exp.log
 *.data
 xyz/icexmoon/java_notes/ch18/compress2/test/*
 *.~vsdx
+*.class
+xyz/icexmoon/java_notes/ch20/extract_interface*/Actionable.java

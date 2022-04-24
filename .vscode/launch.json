@@ -6,17 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Main",
+            "name": "Launch Java Program",
             "request": "launch",
-            "mainClass": "ch13.type_param.Main",
-            "projectName": "java-notebook_8e385eac"
-        },
-        {
-            "type": "java",
-            "name": "Launch MyClass2",
-            "request": "launch",
-            "mainClass": "ch2.MyClass2",
-            "projectName": "java-notebook_8e385eac"
+            "mainClass": ""
         },
         {
             "name": "Python: 当前文件",
