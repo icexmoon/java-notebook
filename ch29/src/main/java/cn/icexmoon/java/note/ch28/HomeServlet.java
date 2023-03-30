@@ -49,14 +49,17 @@ public class HomeServlet extends HttpServlet {
             nowWeather = clientWeather;
         }
         //已经登录
-        resp.setContentType("text/html; charset=UTF-8");
-        PrintWriter writer = resp.getWriter();
+//        resp.setContentType("text/html; charset=UTF-8");
+//        PrintWriter writer = resp.getWriter();
         //显示天气
-        writer.print(String.format("<div>%s</div>", nowWeather));
-        writer.print("<h1>This is your home page</h1>");
-        writer.print(String.format("<div>hello, %s</div>", name));
-        writer.print("<div><a href=\"/hello/exit\">注销</a></div>");
-        writer.flush();
+//        writer.print(String.format("<div>%s</div>", nowWeather));
+//        writer.print("<h1>This is your home page</h1>");
+//        writer.print(String.format("<div>hello, %s</div>", name));
+//        writer.print("<div><a href=\"/hello/exit\">注销</a></div>");
+//        writer.flush();
+        req.setAttribute("nowWeather", nowWeather);
+        req.setAttribute("name", name);
+        req.getRequestDispatcher("/WEB-INF/home.jsp").forward(req, resp);
     }
 
     private static String getWeather() {
